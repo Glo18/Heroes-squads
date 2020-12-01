@@ -1,0 +1,15 @@
+{{#partial "content"}}
+        <div>
+            <h1>Good job!!Here is your new squad! </h1>
+        </div>
+        {{#if "squad"}}
+                {{#each squad}}
+                        <h3>Squad name: {{name}}</h3>
+                        <p>Cause: {{cause}}</p>
+                        <p>Members: {{size}}</p>
+                {{/each}}
+                        {{/if}}
+                        <a class="btn btn-info" href="/squadForm">Add Squad</a>
+                {{/partial}}
+
+                {{> layout.hbs}}

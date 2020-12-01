@@ -3,7 +3,7 @@ plugins {
     id 'application'
 }
 
-group 'org.herosqaud'
+group 'org.Hero-sqaud'
 version '1.0-SNAPSHOT'
 
 mainClassName = 'App'

@@ -17,8 +17,8 @@ public class App {
 
         get("/form", ((request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-            return new ModelAndView(model, "form.hbs");
-        }, new HandlebarsTemplateEngine()));
+            return new ModelAndView(model, "heroform.hbs");
+        }), new HandlebarsTemplateEngine());
 
     }
 }

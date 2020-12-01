@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hero {
-    private String name;
-    private int age;
-    private String power;
-    private String weaknesses;
-    private static List<Hero> instances = new ArrayList<>();
+    private final String name;
+    private final int age;
+    private final String power;
+    private final String weaknesses;
+    private static final List<Hero> instances = new ArrayList<>();
 
     public Hero(String name, int age, String power, String weaknesses)  {
         this.name = name;

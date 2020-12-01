@@ -8,7 +8,7 @@ import java.util.Map;
 
 import static spark.Spark.*;
 
-public class App {
+public class Hero {
 
         public static void main(String[] args) {
             staticFileLocation("/public");

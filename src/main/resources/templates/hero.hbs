@@ -1,0 +1,12 @@
+{{#partial "content"}}
+
+{{#each hero}}
+<div class="hero">
+ <p>Name: {{ name }} </p>
+ <p>Age: {{ age }}</p>
+ <p>Special power: {{ power }}</p>
+ <p>Weakness: {{ weakness }}</p>
+{{each}}
+</div>
+{{partial}}
+{{>layout.hbs}}

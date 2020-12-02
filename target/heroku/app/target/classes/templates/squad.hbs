@@ -4,7 +4,7 @@
             <h1>Good job!!Here is your new squad! </h1>
         </div>
         {{#if "squad"}}
-        <div class="col-md-6">
+        <div class="col-md-4">
                 {{#each squad}}
                 <div class="card" style="background-image: url('../public/images/squadjpeg'); background-size:cover; background-repeat:no-repeat;">
                         <h3>Name: {{name}}</h3>
@@ -14,7 +14,7 @@
                 {{/each}}
                 </div>
                         {{/if}}
-                        <a class="btn btn-info" href="/squadForm">Add Squad</a>
+                        <a class="btn btn-info" href="/squadform">Add Squad</a>
                 </body>
                 {{/partial}}
 

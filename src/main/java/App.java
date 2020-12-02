@@ -28,9 +28,9 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
 
-        get("/heroForm", (request, response) -> {
+        get("/heroform", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            return new ModelAndView(model, "heroForm.hbs");
+            return new ModelAndView(model, "heroform.hbs");
         }, new HandlebarsTemplateEngine());
 
 
@@ -45,7 +45,7 @@ public class App {
             Hero hero = new Hero(name, age, power, weakness);
 
             model.put("hero", hero);
-            return new ModelAndView(model, "successHero.hbs");
+            return new ModelAndView(model, "successhero.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/hero", (request, response) -> {
@@ -54,17 +54,17 @@ public class App {
             return new ModelAndView(model, "hero.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/squadForm", (request, response) -> {
+        get("/squadform", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            return new ModelAndView(model, "squadForm.hbs");
+            return new ModelAndView(model, "squadform.hbs");
         }, new HandlebarsTemplateEngine());
         
         post("/success", App::handle, new HandlebarsTemplateEngine());
 
-        get("/newSquad", (request, response) -> {
+        get("/squad", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             model.put("squad", Squad.getMembers()); //displays squad created
-            return new ModelAndView(model, "newSquad.hbs");
+            return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
 
 

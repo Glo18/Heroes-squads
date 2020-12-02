@@ -4,7 +4,7 @@ Let's create a hero!
 
 {{#partial "content"}}
 <body style="background-image: url('../public/images/herof.jpeg'); background-size:cover; background-repeat:no-repeat;">
-<form action="/addHero" method="post">
+<form action="/add/hero" method="post">
 <div class="form-group">
 <label for="name">Enter the name of the hero:{{name}}</label>
 <input id="name" name="name" class="form-control" type="text" required>
@@ -26,5 +26,5 @@ Let's create a hero!
 </body>
 {{partial}}
 
-{{> layout.hbs}
+{{> layout.hbs}}
 

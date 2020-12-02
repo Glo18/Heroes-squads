@@ -1,5 +1,6 @@
 {{#partial "content"}}
-
+<body style="background-image: url(../public/images/hero.jpeg); background-size:cover; background-repeat:no-repeat;">
+<div class="jumbotron" style="background-color: antiquewhite;">
 {{#each hero}}
 <div class="hero">
  <p>Name: {{ name }} </p>
@@ -8,5 +9,6 @@
  <p>Weakness: {{ weakness }}</p>
 {{each}}
 </div>
+</body>
 {{partial}}
 {{>layout.hbs}}

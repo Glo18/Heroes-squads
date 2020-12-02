@@ -1,5 +1,10 @@
+{{partial "title"}}
+Let's create a squad!
+{{/partial}}
+
 {{#partial "content"}}
-<form action="/addSquad" method="post">
+<body style="background-image: url('../public/images/squadf.jpeg background-size:cover; background-repeat:no-repeat;">
+<form action="/success" method="post">
 <div class="form-group">
 <label for="name">Enter the name of your squad:{{name}}</label>
 <input id="name" name="name" class="form-control" type="text" required>
@@ -14,6 +19,7 @@
 </div>
 <button type="submit" class="btn btn-default">Submit</button>
 </form>
+</body>
 {{partial}}
 
 {{> layout.hbs}

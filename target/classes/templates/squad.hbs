@@ -1,15 +1,21 @@
 {{#partial "content"}}
+<body>
         <div>
             <h1>Good job!!Here is your new squad! </h1>
         </div>
         {{#if "squad"}}
+        <div class="col-md-6">
                 {{#each squad}}
+                <div class="card" style="background-image: url('../public/images/squadjpeg'); background-size:cover; background-repeat:no-repeat;">
                         <h3>Name: {{name}}</h3>
                         <p>Cause: {{cause}}</p>
                         <p>Size: {{size}}</p>
+                </div>
                 {{/each}}
+                </div>
                         {{/if}}
                         <a class="btn btn-info" href="/squadForm">Add Squad</a>
+                </body>
                 {{/partial}}
 
                 {{> layout.hbs}}

@@ -17,7 +17,7 @@ public class Squad {
         this.cause = cause;
         members.add(this);
     }
-    public String getName(){
+    public String getName() {
         return name;
     }
     public int getSize() {

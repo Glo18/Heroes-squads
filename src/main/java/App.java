@@ -1,8 +1,6 @@
 import models.Hero;
 import models.Squad;
 import spark.ModelAndView;
-import spark.Request;
-import spark.Response;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 import java.util.HashMap;
 import java.util.Map;
@@ -58,8 +56,19 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "squadform.hbs");
         }, new HandlebarsTemplateEngine());
-        
-        post("/success", App::handle, new HandlebarsTemplateEngine());
+
+        post("/success", (request, response) -> {
+
+            Map<String, Object> model = new HashMap<>();
+            String name = request.queryParams("name");
+            int size = Integer.parseInt(request.queryParams("size"));
+            String cause = request.queryParams("cause");
+
+            Squad squad = new Squad(name, size, cause);
+
+            model.put("squad", squad);
+            return new ModelAndView(model, "successSquad.hbs");
+        }, new HandlebarsTemplateEngine());
 
         get("/squad", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
@@ -69,18 +78,7 @@ public class App {
 
 
     }
-
-    private static ModelAndView handle(Request request, Response response) {
-
-        Map<String, Object> model = new HashMap<>();
-        String name = request.queryParams("name");
-        int size = Integer.parseInt(request.queryParams("size"));
-        String cause = request.queryParams("cause");
-
-        Squad squad = new Squad(name, size, cause);
-
-        model.put("squad", squad);
-        return new ModelAndView(model, "successSquad.hbs");
-    }
 }
+
+
 

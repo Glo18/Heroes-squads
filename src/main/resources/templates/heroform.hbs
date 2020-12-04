@@ -4,7 +4,7 @@ Let's create a hero!
 
 {{#partial "content"}}
 <body style="background-image: url('../public/images/herof.jpeg); background-size:cover; background-repeat:no-repeat;">
-<form action="/add/hero" method="post">
+<form action="/new/hero" method="post">
 <div class="form-group">
 <label for="name">Enter the name of the hero:{{name}}</label>
 <input id="name" name="name" class="form-control" type="text" required>
@@ -21,7 +21,7 @@ Let's create a hero!
 <label for="weakness">Enter the weakness of the hero:{{weakness}}</label>
 <input id="weakness" name="weakness" class="form-control" type="text" required>
 </div>
-<button class="btn btn-success" href="/successhero" type="submit">Submit</button>
+<button class="btn btn-success" type="submit">Submit</button>
 </form>
 </body>
 {{/partial}}

@@ -2,14 +2,17 @@
 <body style="background-image: url(../public/images/hero.jpeg); background-size:cover; background-repeat:no-repeat;">
 <br>
 <div class="jumbotron" style="background-color: antiquewhite;">
+<div>
+<h1><a class="btn" href="/heroform">Create hero</a></h1>
+</div>
 {{#each hero}}
 <div class="hero">
  <p>Name: {{ name }} </p>
  <p>Age: {{ age }}</p>
  <p>Special power: {{ power }}</p>
  <p>Weakness: {{ weaknesses }}</p>
-{{each}}
+{{/each}}
 </div>
 </body>
-{{partial}}
+{{/partial}}
 {{>layout.hbs}}

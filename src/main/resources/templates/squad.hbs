@@ -6,14 +6,18 @@
         {{#if "squad"}}
         <div class="col-md-4">
                 {{#each squad}}
-                <div class="card" style="background-image: url(../public/images/squad.jpeg); background-size:cover; background-repeat:no-repeat;">
+                <div class="card" style="background-image: url(../public/images/squad.jpeg);" background-size:cover; background-repeat:no-repeat;">
                         <h3>Name: {{name}}</h3>
+                        <hr>
                         <p>Cause: {{cause}}</p>
+                        <hr>
                         <p>Size: {{size}}</p>
+                        <hr>
                 </div>
                 {{/each}}
                 </div>
                         {{/if}}
+                        <br>
                        <a class="btn btn-info" href="/squadform">Add Squad</a>
                 </body>
                 {{/partial}}
